@@ -1,25 +1,3 @@
 {
-  "pacientes": [
-    {
-      "id": 1,
-      "nome": "Felipe Wiclif Leal da Silva",
-      "idade": 18,
-      "email": "felipe@zypherx.com",
-      "status": "ativo"
-    },
-    {
-      "id": 2,
-      "nome": "Gabriel Ambrósio Saraiva",
-      "idade": 19,
-      "email": "gabriel@zypherx.com",
-      "status": "ativo"
-    },
-    {
-      "id": 3,
-      "nome": "Paulo Cesar Oliveira Andrade",
-      "idade": 20,
-      "email": "paulo@zypherx.com",
-      "status": "inativo"
-    }
-  ]
+  "pacientes": []
 }
