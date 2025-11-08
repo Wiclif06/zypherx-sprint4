@@ -9,6 +9,7 @@ Como rodar
 
 1) Instalar dependências
 npm install
+npx json-server --watch db.json --port 3001
 
 2) Duplicar .env.example -> .env e ajustar a URL
 cp .env.example .env
@@ -62,4 +63,3 @@ Estrutura de pastas
   index.css
   main.tsx
   App.tsx
-  

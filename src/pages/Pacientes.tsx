@@ -104,13 +104,11 @@ export default function Pacientes(){
     return `CRM-${num}-SP`
   }
 
-// Nova versão do gerarAtestadoPDF
 const gerarAtestadoPDF = async () => {
   if (!pacienteAtestado || !consultaAtestado) return;
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
   const margem = 20;
 
-  // Cabeçalho
   doc.addImage(logo, 'PNG', margem, 10, 35, 12);
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(16);
@@ -119,12 +117,10 @@ const gerarAtestadoPDF = async () => {
   doc.text('Hospital das Clínicas – Unidade Digital', 105, 29, { align: 'center' });
   doc.line(margem, 35, 210 - margem, 35);
 
-  // Título
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(16);
   doc.text('ATESTADO MÉDICO', 105, 55, { align: 'center' });
 
-  // Corpo centralizado e mais compacto
   const nome = pacienteAtestado.nome;
   const cpf = pacienteAtestado.cpf;
   const data = new Date().toLocaleDateString('pt-BR');
@@ -145,17 +141,15 @@ const gerarAtestadoPDF = async () => {
   let y = 80;
   corpo.forEach(line => {
     doc.text(line, 105, y, { align: 'center', maxWidth: 170 });
-    y += 8; // espaçamento menor entre linhas
+    y += 8;
   });
 
-  // Assinatura centralizada
   doc.addImage(assinatura, 'PNG', 105 - 25, 200, 50, 18);
   doc.line(70, 215, 150, 215);
   const medico = medicoNome?.trim() ? medicoNome : 'Médico Responsável';
   doc.text(medico, 105, 223, { align: 'center' });
   doc.text(`${crm}`, 105, 230, { align: 'center' });
 
-  // QR Code e rodapé
   const codigo = `${cpf}-${Date.now()}`;
   const qrData = await QRCode.toDataURL(codigo);
   doc.addImage(qrData, 'PNG', 20, 260, 25, 25);
@@ -169,7 +163,7 @@ const gerarAtestadoPDF = async () => {
 
   return (
     <section className="space-y-8 animate-fadeIn">
-      {/* Cadastro */}
+      {}
       <div className="card p-6 md:p-10">
         <h2 className="text-2xl font-bold mb-6">Gerenciamento de Pacientes</h2>
 
@@ -208,7 +202,7 @@ const gerarAtestadoPDF = async () => {
         </form>
       </div>
 
-      {/* Consultar por CPF */}
+      {}
       <div className="card p-6 md:p-10 mt-6">
         <h3 className="text-xl font-bold mb-4">Consultar Ficha do Paciente</h3>
         <div className="flex flex-col md:flex-row gap-3 mb-4">
@@ -248,7 +242,7 @@ const gerarAtestadoPDF = async () => {
         )}
       </div>
 
-      {/* Painel de Últimas Consultas */}
+      {}
       {mostrarConsultas && (
         <div className="card p-6 md:p-10 mt-6 animate-slideUp">
           <h3 className="text-xl font-bold mb-4">Últimas Consultas Registradas</h3>
@@ -293,7 +287,7 @@ const gerarAtestadoPDF = async () => {
         </div>
       )}
 
-      {/* Modal Atestado */}
+      {}
       {showAtestado && (
         <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50">
           <div className="card p-6 max-w-md w-full">

@@ -82,6 +82,25 @@
         }
       ],
       "id": "zFtI2ji"
+    },
+    {
+      "nome": "Felipe Leal",
+      "cpf": "42467399800",
+      "idade": 22,
+      "email": "felipeleal@gmail.com",
+      "status": "ativo",
+      "historico": [
+        {
+          "data": "08/11/2025, 17:27:07",
+          "sintomas": [
+            "Febre",
+            "Tosse",
+            "Pressão alta"
+          ],
+          "observacoes": "Está com 38° de Febre e Tonturas fortes."
+        }
+      ],
+      "id": "x3vfNyp"
     }
   ]
 }
