@@ -89,18 +89,30 @@
       "idade": 22,
       "email": "felipeleal@gmail.com",
       "status": "ativo",
+      "historico": [],
+      "id": "x3vfNyp"
+    },
+    {
+      "nome": "Ingrid Madeiro",
+      "cpf": "123.456.789-10",
+      "idade": 30,
+      "email": "ingridmadediro@gmail.com",
+      "status": "ativo",
       "historico": [
         {
-          "data": "08/11/2025, 17:27:07",
+          "data": "08/11/2025, 18:19:47",
           "sintomas": [
             "Febre",
             "Tosse",
+            "Cansaço",
+            "Dor abdominal",
+            "Tontura",
             "Pressão alta"
           ],
-          "observacoes": "Está com 38° de Febre e Tonturas fortes."
+          "observacoes": "Fizemos o teste de pressão, deu como pressão alta, ela está com febre 42°"
         }
       ],
-      "id": "x3vfNyp"
+      "id": "CyPmyqp"
     }
   ]
 }

@@ -12,7 +12,7 @@ const integrantes: (Integrante & {
     rm: '566552',
     turma: '1TDSPY',
     role: 'Estudante',
-    idade: 19,
+    idade: 23,
     curso: 'Análise e Desenvolvimento de Sistemas',
     unidade: 'FIAP – Unidade Paulista',
   },

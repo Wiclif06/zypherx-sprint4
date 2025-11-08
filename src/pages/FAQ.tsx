@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react'
 
 type FAQ = { id: string; q: string; a: string }
 
@@ -37,33 +38,66 @@ const faqs: FAQ[] = [
 
 export default function FAQ() {
   const [ativo, setAtivo] = useState<string | null>(null)
-
-  const toggle = (id: string) => {
-    setAtivo(ativo === id ? null : id)
-  }
+  const toggle = (id: string) => setAtivo(ativo === id ? null : id)
 
   return (
-    <section className="card p-6 md:p-10 max-w-4xl mx-auto animate-fadeIn">
-      <h2 className="text-3xl font-bold mb-6">FAQ</h2>
-      <div className="space-y-4">
-        {faqs.map((faq) => (
-          <div key={faq.id} className="card p-4 md:p-6">
-            <h3 className="text-lg font-semibold">{faq.q}</h3>
-            <button
-              className="btn mt-3"
-              onClick={() => toggle(faq.id)}
-            >
-              {ativo === faq.id ? 'Ocultar Resposta' : 'Analisar Resposta'}
-            </button>
-
-            {ativo === faq.id && (
-              <p className="mt-4 text-neutral-300 animate-slideUp">
-                {faq.a}
-              </p>
-            )}
-          </div>
-        ))}
+    <section className="card p-8 md:p-12 max-w-4xl mx-auto animate-fadeIn">
+      {/* Cabeçalho */}
+      <div className="flex items-center justify-center mb-6">
+        <HelpCircle size={32} className="text-brand-400 mr-2" />
+        <h2 className="text-3xl font-extrabold">Perguntas Frequentes (FAQ)</h2>
       </div>
+      <p className="text-neutral-400 text-center max-w-2xl mx-auto mb-10">
+        Aqui estão as principais dúvidas sobre o funcionamento da plataforma <b>ZypherX</b>.  
+        Clique em uma pergunta para visualizar sua resposta.
+      </p>
+
+      {/* FAQ Lista */}
+      <div className="space-y-4">
+        {faqs.map((faq) => {
+          const aberto = ativo === faq.id
+          return (
+            <div
+              key={faq.id}
+              className={`border border-neutral-800 rounded-2xl bg-neutral-900/50 hover:border-brand-500 transition-all duration-300 p-5 ${
+                aberto ? 'shadow-md shadow-brand-500/10' : ''
+              }`}
+            >
+              <button
+                className="flex justify-between items-center w-full text-left"
+                onClick={() => toggle(faq.id)}
+              >
+                <h3
+                  className={`text-lg font-semibold ${
+                    aberto ? 'text-brand-400' : 'text-neutral-200'
+                  }`}
+                >
+                  {faq.q}
+                </h3>
+                {aberto ? (
+                  <ChevronUp size={22} className="text-brand-400" />
+                ) : (
+                  <ChevronDown size={22} className="text-neutral-400" />
+                )}
+              </button>
+
+              <div
+                className={`overflow-hidden transition-all duration-500 ${
+                  aberto ? 'max-h-40 mt-3 opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <p className="text-neutral-300 text-sm leading-relaxed">
+                  {faq.a}
+                </p>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+      <footer className="mt-10 text-center text-neutral-500 text-sm">
+        <p>Hospital das Clínicas – Unidade Digital | Projeto ZypherX 2025 • FIAP</p>
+      </footer>
     </section>
   )
 }
