@@ -6,6 +6,82 @@
       "idade": 19,
       "email": "felipewicliflealdasilva@gmail.com",
       "status": "ativo"
+    },
+    {
+      "id": "a16b",
+      "nome": "Felipe Wiclif Leal da Silva",
+      "cpf": "42467399877",
+      "idade": 22,
+      "email": "felipewicliflealdasilva@gmail.com",
+      "status": "ativo",
+      "historico": [
+        {
+          "data": "08/11/2025, 15:39:30",
+          "sintomas": [
+            "Vômito",
+            "Pressão alta",
+            "Infecção de garganta",
+            "Insônia",
+            "Coceira",
+            "Dores nas articulações",
+            "Enjoo",
+            "Dor de ouvido",
+            "Taquicardia"
+          ],
+          "observacoes": "Está com Febre 32°"
+        },
+        {
+          "data": "08/11/2025, 17:14:44",
+          "sintomas": [
+            "Dor no corpo"
+          ],
+          "observacoes": "teste"
+        }
+      ]
+    },
+    {
+      "id": "73b4",
+      "nome": "Felipe",
+      "cpf": "42467399877",
+      "idade": 22,
+      "email": "felipewicliflealdasilva@gmail.com",
+      "status": "ativo",
+      "historico": []
+    },
+    {
+      "id": "eca2",
+      "nome": "Ambrósio",
+      "cpf": "44473623244",
+      "idade": 22,
+      "email": "ambrosio@gmail.com",
+      "status": "ativo",
+      "historico": [
+        {
+          "data": "08/11/2025, 15:40:12",
+          "sintomas": [
+            "Dor no corpo",
+            "Náusea"
+          ],
+          "observacoes": "está vomitando a cada 2 horas."
+        }
+      ]
+    },
+    {
+      "nome": "tst",
+      "cpf": "424",
+      "idade": 22,
+      "email": "sfwf@fgsgd",
+      "status": "ativo",
+      "historico": [
+        {
+          "data": "08/11/2025, 17:21:44",
+          "sintomas": [
+            "Infecção de garganta"
+          ],
+          "observacoes": "teste"
+        }
+      ],
+      "id": "zFtI2ji"
     }
   ]
 }

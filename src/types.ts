@@ -1,24 +1,16 @@
 
-// Tipos básicos exigidos no critério
-export type ID = string | number;
-export interface Integrante {
-  nome: string;
-  rm: string;
-  turma: string;
-  role?: 'Dev' | 'Design' | 'PM' | 'Data' | 'QA'; // Union type
+export interface Consulta {
+  data: string
+  sintomas: string[]
+  observacoes: string
 }
-
-export type Status = 'ativo' | 'inativo'; // Union
 
 export interface Paciente {
-  id: ID;
-  nome: string;
-  idade: number;
-  email: string;
-  status: Status;
+  id?: number
+  nome: string
+  cpf: string
+  idade: number
+  email: string
+  status: 'ativo' | 'inativo'
+  historico: Consulta[]
 }
-
-// Intersection type: recurso com timestamps
-export type WithTimestamps<T> = T & { createdAt: string; updatedAt: string };
-
-export interface ApiList<T> { items: T[]; total: number; }

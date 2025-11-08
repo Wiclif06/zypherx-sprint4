@@ -10,6 +10,8 @@
     "api": "npx json-server --watch db.json --port 3001"
   },
   "dependencies": {
+    "jspdf": "^3.0.3",
+    "qrcode": "^1.5.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.0"
@@ -19,10 +21,10 @@
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.20",
+    "json-server": "^0.17.4",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.5.3",
-    "vite": "^5.4.2",
-    "json-server": "^0.17.4"
+    "vite": "^5.4.2"
   }
 }
