@@ -1,0 +1,48 @@
+{
+  "pacientes": [
+    {
+      "id": 1,
+      "nome": "Ana Souza",
+      "idade": 29,
+      "email": "ana@exemplo.com",
+      "status": "ativo",
+      "createdAt": "2025-01-01T12:00:00.000Z",
+      "updatedAt": "2025-01-01T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "nome": "Carlos Lima",
+      "idade": 42,
+      "email": "carlos@exemplo.com",
+      "status": "ativo",
+      "createdAt": "2025-01-02T12:00:00.000Z",
+      "updatedAt": "2025-01-02T12:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "nome": "Mariana Alves",
+      "idade": 35,
+      "email": "mariana@exemplo.com",
+      "status": "inativo",
+      "createdAt": "2025-01-03T12:00:00.000Z",
+      "updatedAt": "2025-01-03T12:00:00.000Z"
+    }
+  ],
+  "faq": [
+    {
+      "id": "api",
+      "q": "Como configurar a API Java p\u00fablica?",
+      "a": "Defina VITE_API_URL no .env apontando para a URL externa."
+    },
+    {
+      "id": "deploy",
+      "q": "Como fazer deploy na Vercel?",
+      "a": "Conecte o reposit\u00f3rio no painel da Vercel e configure as vari\u00e1veis .env."
+    },
+    {
+      "id": "crud",
+      "q": "Como testar o CRUD?",
+      "a": "Acesse /pacientes e utilize o formul\u00e1rio para criar/editar/remover."
+    }
+  ]
+}
