@@ -1,5 +1,6 @@
 
 import { Routes, Route, useNavigate } from 'react-router-dom'
+<Route path="/pacientes" element={<Pacientes />} />
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
