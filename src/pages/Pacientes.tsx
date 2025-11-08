@@ -61,17 +61,17 @@ export default function Pacientes() {
     try {
       if (editingId != null) {
         await PacientesAPI.update(editingId, form)
-        setMessage('✅ Paciente atualizado com sucesso.')
+        setMessage('Paciente atualizado com sucesso.')
       } else {
         await PacientesAPI.create(form)
-        setMessage('✅ Paciente cadastrado com sucesso.')
+        setMessage('Paciente cadastrado com sucesso.')
       }
       setForm({ ...empty })
       setEditingId(null)
       setStep(1)
       await load()
     } catch (e: any) {
-      setErr('❌ Falha ao salvar. Tente novamente.')
+      setErr('Falha ao salvar. Tente novamente.')
     } finally {
       setLoading(false)
     }
@@ -88,10 +88,10 @@ export default function Pacientes() {
     if (!confirm('Deseja realmente excluir este paciente?')) return
     try {
       await PacientesAPI.remove(id)
-      setMessage('🗑️ Paciente removido com sucesso.')
+      setMessage('Paciente removido com sucesso.')
       await load()
     } catch (e: any) {
-      setErr('❌ Erro ao remover paciente.')
+      setErr('Erro ao remover paciente.')
     }
   }
 
@@ -111,7 +111,7 @@ export default function Pacientes() {
           <div className={`step ${step >= 2 ? 'active' : ''}`}>2. Lista</div>
         </div>
 
-        {/* FORMULÁRIO */}
+        {}
         {step === 1 && (
           <form className="mt-8 grid md:grid-cols-2 gap-4" onSubmit={onSubmit}>
             <div>
@@ -147,7 +147,7 @@ export default function Pacientes() {
           </form>
         )}
 
-        {/* LISTA */}
+        {}
         {step === 2 && (
           <div className="mt-8 animate-slideUp">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">

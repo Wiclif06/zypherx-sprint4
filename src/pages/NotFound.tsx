@@ -11,7 +11,7 @@ export default function NotFound() {
       </p>
 
       <Link to="/" className="inline-flex items-center gap-2 mx-auto btn mt-4">
-        {/* Ícone seta (SVG inline) */}
+        {}
         <svg
           className="w-4 h-4"
           viewBox="0 0 24 24"

@@ -1,12 +1,52 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: dark; }
-.container-responsive { @apply mx-auto w-[92%] max-w-7xl; }
-.card { @apply rounded-2xl bg-neutral-900/60 backdrop-blur border border-neutral-800 shadow-lg; }
-.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium border border-neutral-700 hover:border-brand-500 hover:text-white hover:bg-brand-600/20 transition; }
-.input { @apply w-full rounded-xl bg-neutral-900/60 border border-neutral-700 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500; }
-.label { @apply text-sm text-neutral-300; }
-.muted { @apply text-neutral-400; }
+:root { 
+  color-scheme: dark; 
+  --brand: #3b82f6; /* azul FIAP moderno */
+}
+
+.container-responsive { 
+  @apply mx-auto w-[92%] max-w-7xl; 
+}
+
+.card { 
+  @apply rounded-2xl bg-neutral-900/70 backdrop-blur border border-neutral-800 shadow-lg transition-all duration-300 hover:shadow-brand-700/10;
+}
+
+.btn { 
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium border border-neutral-700 
+         hover:border-brand-500 hover:text-white hover:bg-brand-600/20 transition active:scale-[0.97];
+}
+
+.input { 
+  @apply w-full rounded-xl bg-neutral-900/60 border border-neutral-700 px-3 py-2 outline-none 
+         focus:ring-2 focus:ring-brand-500 transition;
+}
+
+.label { 
+  @apply text-sm text-neutral-300 font-medium;
+}
+
+.muted { 
+  @apply text-neutral-400;
+}
+
+/* ---- EFEITOS SUAVES ---- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: fadeIn 0.4s ease both; }
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slideUp { animation: slideUp 0.3s ease both; }
+
+/* ---- FEEDBACKS VISUAIS ---- */
+.text-success { @apply text-green-400; }
+.text-error { @apply text-red-400; }
+.text-info { @apply text-blue-400; }
