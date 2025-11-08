@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 
 const detalhes: Record<string, { title: string; body: string }> = {
   api: { title: 'Configuração da API',
+
     body: 'No dashboard da Vercel, importe o repositório, defina as variáveis, e faça o deploy. Inclua a URL no README.' },
   crud: { title: 'Testando o CRUD',
     body: 'Acesse /pacientes para listar, criar, editar e excluir registros, com feedback de sucesso/erro.' }

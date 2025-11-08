@@ -17,10 +17,6 @@ export function Footer() {
             <li>Contato</li>
           </ul>
         </div>
-        <div>
-          <div className="text-neutral-200 font-semibold">Configuração</div>
-          <p className="mt-2">Defina <code>VITE_API_URL</code> no <code>.env</code> para apontar à API Java publicada.</p>
-        </div>
       </div>
       <div className="border-t border-neutral-800 text-center py-4 text-xs text-neutral-500">
         © {new Date().getFullYear()} ZypherX. Todos os direitos reservados.

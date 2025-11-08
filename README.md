@@ -39,6 +39,7 @@ Integrantes
 - Paulo Cesar Oliveira Andrade — RM 563299 — Turma 1TDSPY
 
 Link do GitHub: https://github.com/Wiclif06/zypherx-sprint4
+Video do Sistema: https://youtu.be/nq5JTSTPzMo
 
 Acessibilidade & Usabilidade
 Contrast ratio alto (tema dark), foco visível, semântica, feedback textual em operações.
