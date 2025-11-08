@@ -16,7 +16,7 @@ export default function FAQ() {
           <li key={f.id} className="card p-4">
             <div className="font-semibold">{f.q}</div>
             <p className="muted mt-1">{f.a}</p>
-            <Link to={`/faq/${f.id}`} className="btn mt-3">Ver resposta</Link>
+            <Link to={`/faq/${f.id}`} className="btn mt-3">Analisar Respota</Link>
           </li>
         ))}
       </ul>

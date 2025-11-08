@@ -24,7 +24,7 @@ export default function Contato() {
       <h2 className="text-2xl font-bold">Contato</h2>
       <form className="mt-6 space-y-4" onSubmit={onSubmit}>
         <div>
-          <label className="label">Nome</label>
+          <label className="label">Nome Completo</label>
           <input className="input" value={state.nome} onChange={e => setState(s=>({...s, nome:e.target.value}))} required />
         </div>
         <div>
@@ -38,8 +38,8 @@ export default function Contato() {
         <button className="btn" type="submit" disabled={status==='enviando'}>
           {status==='enviando' ? 'Enviando...' : 'Enviar'}
         </button>
-        {status==='ok' && <p className="text-green-400">Mensagem enviada!</p>}
-        {status==='erro' && <p className="text-red-400">Falha ao enviar. Tente novamente.</p>}
+        {status==='ok' && <p className="text-green-400">Mensagem enviada com sucesso!</p>}
+        {status==='erro' && <p className="text-red-400">Ocorreu um erro ao enviar a imagem, por gentileza tente novamente.</p>}
       </form>
     </section>
   )
